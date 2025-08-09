@@ -6,7 +6,7 @@ function assert(expected, actual) {
 
 function detectOverlap(schedule) {
 // sort the schedule by start time
-  schedule.sort((a, b) => a[0] - b[0]);
+  schedule.sort((a, b) => a - b);
 
 // iterate through the sorted schedule
   for (let i = 0; i < schedule.length - 1; i++) {

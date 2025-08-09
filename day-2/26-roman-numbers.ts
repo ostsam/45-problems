@@ -22,3 +22,5 @@ function romanToInt(s: string): number {
   }
   return result;
 }
+
+console.log(romanToInt("CM"))
