@@ -26,13 +26,8 @@ const profitableItems = (
   day: Item [],
   profitTarget: number
 ) => {
-    let profitable: string[] = [];
-    for (const item of day) {
-        if ((item.price - item.cost) * item.sold >= profitTarget) {
-          profitable.push(item.name);
-        }
-    }
-    return profitable
+    return day.filter(item => (item.price - item.cost) * item.sold >= profitTarget)
+    .map(item => item.name);
 };
 
 // test case 1
